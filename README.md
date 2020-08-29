@@ -4,6 +4,7 @@ API do Instagram criado para o processo seletivo Zup
 Este arquivo servirá como diário de bordo/Manual de uso para o projeto, portanto, leia com atenção.
 
 -- INDEX --
+
 1 - Avisos importantes, ajustes que precisam ser feitos manualmente antes do uso e ferramentas utilizadas.
 2 - Resumo da utilização dos packages e classes contidas dentro deles.
 3 - Demonstração do uso das páginas e requisições.
