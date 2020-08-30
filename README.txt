@@ -15,6 +15,7 @@ Antes de rodar o código é preciso que a máquina utilizada tenha alguns progra
 - A versão mais recente do Java instalada na máquina
 - Maven
 - MySQL instalado e pré-configurado
+- Postman
 
 Agora, para que as entidades de dado sejam devidamente criadas, precisamos fazer algumas alterações.
 vá até o arquivo "application.properties" na sua IDE, neste arquivo, deveremos executar algumas alterações.
