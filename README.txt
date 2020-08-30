@@ -98,4 +98,4 @@ Espero que a API esteja dentro das espectativas de vocês, investi muito tempo e
 
 
 
-Vinícius Maximiliano - vinnemaax@gmail.com - 983241648
+Vinícius Maximiliano - vinnemaax@gmail.com
