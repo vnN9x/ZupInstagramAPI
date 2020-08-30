@@ -78,7 +78,8 @@ contidas em um usuário já existente, podendo editar todas, algumas ou nenhuma 
 
 3.3 "/perfil/feed/(id)" GET - o ID refere-se ao id de um perfil já criado. Exibe todos as postagens feitas  pelo perfil.
 
-3.4 "/perfil/seguir/(id)" POST - o ID refere-se ao id de um perfil já criado. Acessa o perfil específicado no caminho e segue um perfil especificando o seu ID, exemplo de JSON:
+3.4 "/perfil/seguir/(id)" POST - o ID refere-se ao id de um perfil já criado. Acessa o perfil específicado no caminho e segue um perfil especificando o seu ID
+ exemplo de JSON:
 {
     "seguindoId":1
 }
@@ -88,3 +89,12 @@ em forma de json, a chave "requestId" não deve ser interpretada, ela é utiliza
 
 3.6 "/perfil/seguidores/(id)" GET - o ID refere-se ao id de um perfil já criado. Acessa o perfil específicado no caminho e exibe o ID de todos o perfis que o estão seguindo
 em forma de json, a chave "requestId" não deve ser interpretada, ela é utilizada apenas para fins de banco de dados.
+
+4.
+Este código está passível a erros lógicos. Quando o desafio foi me apresentado eu sabia pouco; quase nada sobre Spring, mesmo assim aprendi muito
+com o framework em pouquissímos dias, isso me deixou animado para aprender mais e trabalhar com essa técnologia, se possível,
+espero que a API esteja dentro das espectativas de vocês, investi muito tempo e esforço neste projeto e fiquei contente com o resultado. Grato pela oportunidade :)
+
+
+
+Vinícius Maximiliano - vinnemaax@gmail.com - 983241648
