@@ -43,7 +43,16 @@ public class ProfileController {
 	SeguidoresRepository seguidoresRepository;
 	
 	@PostMapping //cria um novo perfil
-	public ResponseEntity<?> registerUserAccount(@RequestBody User user) {
+	public ResponseEntity<?> registerUserAccount(@RequestBody UserDetailRequest userDetail, User user) {
+		user.setBiografia(userDetail.getBiografia());
+		user.setEmail(userDetail.getEmail());
+		user.setGenero(userDetail.getGenero());
+		user.setNomeCompleto(userDetail.getNomeCompleto());
+		user.setPerfilImg(userDetail.getPerfilImg());
+		user.setSenha(userDetail.getSenha());
+		user.setSite(userDetail.getSite());
+		user.setUserName(userDetail.getUserName());
+		user.setTelefone(userDetail.getTelefone());
 		User saveUser = userRepository.save(user);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().replacePath("/perfil").path("{/id}")
 				.buildAndExpand(saveUser.getId()).toUri();
@@ -62,13 +71,11 @@ public class ProfileController {
 	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.POST) //posta uma imagem de um perfil especifico em "/perfil/id"
-	public ResponseEntity<?> addImgById(@PathVariable long id, @RequestBody Img img){
+	public ResponseEntity<Img> addImgById(@PathVariable long id, @RequestBody Img img){
 		User users = userRepository.findById(id).get();
 		img.setUser(users);
 		Img saveImg = imgRepository.save(img);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().replacePath("/perfil").path("{/id}")
-				.buildAndExpand(saveImg.getId()).toUri();
-		return ResponseEntity.created(uri).build();
+		return new ResponseEntity<Img>(saveImg, HttpStatus.OK);
 	}
 	
 	@PutMapping(path="/{id}") //atualiza as informações de uma perfil selecionado em "/perfil/id"
@@ -98,12 +105,12 @@ public class ProfileController {
 		return imgs;
 	}
 	
-	@PostMapping(path= "/seguindo/{id}") //Utiliza o perfil do path para seguir outro perfil informando seu ID
+	@PostMapping(path= "/seguir/{id}") //Utiliza o perfil do path para seguir outro perfil informando seu ID
 	public ResponseEntity<Seguindo> seguir(@PathVariable long id, @RequestBody Seguindo seguindo, Seguidores seguidores){
 		User users = userRepository.findById(id).get();
 		seguindo.setUser(users);
+		seguidores.setSeguidorId(seguindo.getSeguidorId());
 		seguidores.setUser(users);
-		seguidores.setRequestId(id);
 		seguidoresRepository.save(seguidores);
 		Seguindo saveSeguindo = seguindoRepository.save(seguindo);
 		return new ResponseEntity<Seguindo>(saveSeguindo, HttpStatus.OK);
@@ -111,7 +118,7 @@ public class ProfileController {
 	
 	
 	@GetMapping("/seguindo/{id}") //Vê quem o perfil do path(ID) está seguindo
-	public List<Seguindo> follow(@PathVariable long id){
+	public List<Seguindo> showFollowing(@PathVariable long id){
 		List<Seguindo> seguindos = seguindoRepository.findByUserId(id);
 		return seguindos;
 	}

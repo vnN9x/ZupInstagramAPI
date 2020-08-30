@@ -20,7 +20,7 @@ public class Seguidores {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long requestId;
 	@Column(name = "seguidor_id")
-	private int seguidorId;
+	private long seguidorId;
 	
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
     @JsonIdentityReference(alwaysAsId = true)
@@ -29,17 +29,16 @@ public class Seguidores {
 
 	public Seguidores() {}
 	
-	public Seguidores(long requestId, int seguidorId) {
+	public Seguidores(long seguidorId) {
 		super();
-		this.requestId = requestId;
 		this.seguidorId = seguidorId;
 	}
 
-	public int getSeguidorId() {
+	public long getSeguidorId() {
 		return seguidorId;
 	}
 
-	public void setSeguidorId(int seguidorId) {
+	public void setSeguidorId(long seguidorId) {
 		this.seguidorId = seguidorId;
 	}
 
