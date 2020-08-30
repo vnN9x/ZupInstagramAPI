@@ -92,8 +92,8 @@ em forma de json, a chave "requestId" não deve ser interpretada, ela é utiliza
 
 4.
 Este código está passível a erros lógicos. Quando o desafio foi me apresentado eu sabia pouco; quase nada sobre Spring, mesmo assim aprendi muito
-com o framework em pouquissímos dias, isso me deixou animado para aprender mais e trabalhar com essa técnologia, se possível,
-espero que a API esteja dentro das espectativas de vocês, investi muito tempo e esforço neste projeto e fiquei contente com o resultado. Grato pela oportunidade :)
+com o framework em pouquissímos dias, isso me deixou animado para aprender mais e trabalhar com essa técnologia, se possível.
+Espero que a API esteja dentro das espectativas de vocês, investi muito tempo e esforço neste projeto e fiquei contente com o resultado. Grato pela oportunidade :)
 
 
 
