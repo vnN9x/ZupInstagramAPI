@@ -96,6 +96,6 @@ Este código está passível a erros lógicos. Quando o desafio foi me apresenta
 com o framework em pouquissímos dias, isso me deixou animado para aprender mais e trabalhar com essa técnologia, se possível.
 Espero que a API esteja dentro das espectativas de vocês, investi muito tempo e esforço neste projeto e fiquei contente com o resultado. Grato pela oportunidade :)
 
-
-
+Apresentação em PowerPoint para melhor visualização: https://docs.google.com/presentation/d/1d5Gv_YeTb2xyqzaHFDvFzypmAeYNxsRsJOdUCYdolqc/edit?usp=sharing
 Vinícius Maximiliano - vinnemaax@gmail.com
+
